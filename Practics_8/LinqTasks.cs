@@ -14,58 +14,64 @@ namespace Practics_8
 
     public class LinqTasks
     {
+        // Task 1
         public IEnumerable<int> GetEvenNumbers(List<int> numbers)
         {
-            return ;
+            return numbers.Where(n => n % 2 == 0);
         }
 
+        // Task 2
         public int GetSum(List<int> numbers)
         {
-            return ;
+            return numbers.Sum();
         }
 
+        // Task 3
         public IEnumerable<string> GetLongStrings(List<string> strings)
         {
-            return ;
+            return strings.Where(s => s.Length > 3);
         }
 
-
+        // Task 4
         public Person FindPersonByName(List<Person> people, string name)
         {
-            return ;
+            return people.FirstOrDefault(p => p.Name == name);
         }
 
+        // Task 5
         public IEnumerable<int> SortDescending(List<int> numbers)
         {
-            return ;
+            return numbers.OrderByDescending(n => n);
         }
 
+        // Task 6
         public IEnumerable<IGrouping<int, Person>> GroupByAge(List<Person> people)
         {
-            return ;
+            return people.GroupBy(p => p.Age);
         }
 
+        // Task 7
         public bool AnyNumberGreaterThanTen(List<int> numbers)
         {
-            return ;
+            return numbers.Any(n => n > 10);
         }
 
+        // Task 8
         public IEnumerable<string?> SelectNames(List<Person> people)
         {
-            return ;
+            return people.Select(p => p.Name);
         }
 
+        // Task 9
         public bool AllPositive(List<int> numbers)
         {
-            return ;
+            return numbers.All(n => n > 0);
         }
 
-        public IEnumerable<int> ConcatenateLists(List<int> list1, List<int> list2)
+        // Task 10
+        public IEnumerable<int> ConcatenateLists(List<int> first, List<int> second)
         {
-            return ;
+            return first.Concat(second);
         }
-
-
     }
-
 }
